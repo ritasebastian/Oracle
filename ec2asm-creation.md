@@ -1,6 +1,6 @@
 Install oracleasm-support rpm package:
  ```bash
- sudo dnf --enablerepo=ol8_addons install oracleasm-support
+ sudo dnf --enablerepo=ol8_addons -y install oracleasm-support
  ```
 
 #### **1. Create a Partition on `/dev/xvdb`**
