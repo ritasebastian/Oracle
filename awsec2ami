@@ -9,3 +9,7 @@ Visit the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
 Choose AMIs from the left navigation panel and then select Public images.
 Use filters to search for Oracle Linux images by choosing Owner and entering the owner ID 131827586825 to list the available Oracle Linux AMIs produced by Oracle.
 Pick the specific Oracle Linux AMI you want to work with.
+
+Install oracleasm-support rpm package:
+
+# dnf --enablerepo=ol8_addons install oracleasm-support
