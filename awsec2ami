@@ -1,1 +1,11 @@
 https://forums.oracle.com/ords/apexds/post/launch-an-oracle-linux-instance-in-aws-9462
+
+For Amazon Web Services (AWS), Oracle offers support for Oracle Linux running on Amazon Elastic Compute Cloud (EC2) and Relational Database Service (RDS). Customers can create their own Amazon Machine Images (AMIs) or they can obtain Oracle-provided Oracle Linux AMIs from Amazon EC2 console by searching for the owner ID 131827586825 and deploying the Oracle Linux images on Amazon EC2 and RDS. Refer to the policy document Licensing Oracle Software in the Cloud Computing Environment for licensing and support pricing details.
+
+This article explains the steps to locate the Oracle-provided Oracle Linux AMIs and launch an Oracle Linux instance using Amazon EC2 console.
+
+Finding Oracle-Provided Oracle Linux AMIs
+Visit the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+Choose AMIs from the left navigation panel and then select Public images.
+Use filters to search for Oracle Linux images by choosing Owner and entering the owner ID 131827586825 to list the available Oracle Linux AMIs produced by Oracle.
+Pick the specific Oracle Linux AMI you want to work with.
