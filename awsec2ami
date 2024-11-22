@@ -12,4 +12,7 @@ Pick the specific Oracle Linux AMI you want to work with.
 
 Install oracleasm-support rpm package:
 
-# dnf --enablerepo=ol8_addons install oracleasm-support
+dnf --enablerepo=ol8_addons install oracleasm-support
+
+# Install oracle prereqisites  
+ dnf install oracle-database-preinstall-19c -y 
