@@ -1,18 +1,19 @@
 
 
-### ** `update_bash_profile.sh`**
+### ** `Oracle binary directory`**
 ```bash
-#!/bin/bash
-mkdir -p /u01/app/oracle/product/19.0.0/dbhome_1
-chown -R oracle:oinstall /u01
-chmod -R 775 /u01 
-# Backup existing .bash_profile
-if [ -f ~/.bash_profile ]; then
-  cp ~/.bash_profile ~/.bash_profile.bak
-  echo "Backup of .bash_profile created at ~/.bash_profile.bak"
-fi
+sudo mkdir -p /u01/app/oracle/product/19.0.0/dbhome_1
+sudo chown -R oracle:oinstall /u01
+sudo chmod -R 775 /u01
+```
 
-# Append Oracle settings using EOF format
+# Backup existing oracle .bash_profile
+```bash
+cp ~/.bash_profile ~/.bash_profile.bak
+```
+
+# Append Oracle settings on .bash_profile
+```bash
 cat <<EOF >> ~/.bash_profile
 
 # Oracle Settings
