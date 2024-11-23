@@ -3,7 +3,9 @@
 ### ** `update_bash_profile.sh`**
 ```bash
 #!/bin/bash
-
+mkdir -p /u01/app/oracle/product/19.0.0/dbhome_1
+chown -R oracle:oinstall /u01
+chmod -R 775 /u01 
 # Backup existing .bash_profile
 if [ -f ~/.bash_profile ]; then
   cp ~/.bash_profile ~/.bash_profile.bak
