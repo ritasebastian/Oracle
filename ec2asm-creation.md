@@ -1,4 +1,8 @@
-Install oracleasm-support rpm package:
+# Install oracle prereqisites  
+ ```bash
+ sudo dnf install oracle-database-preinstall-19c -y 
+ ```
+# Install oracleasm-support rpm package:
  ```bash
  sudo dnf --enablerepo=ol8_addons -y install oracleasm-support
  ```
