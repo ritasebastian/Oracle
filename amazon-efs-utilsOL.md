@@ -58,7 +58,7 @@ echo "fs-080066337fa685f02.efs.us-west-2.amazonaws.com:/ /orcl-arch nfs4 nfsvers
 
 ### Explanation of the Command:
 1. **EFS DNS Name**: `fs-080066337fa685f02.efs.us-west-2.amazonaws.com:/` - The EFS file system DNS.
-2. **Mount Point**: `/efs` - The directory where the file system will be mounted.
+2. **Mount Point**: `/orcl-arch` - The directory where the file system will be mounted.
 3. **Filesystem Type**: `nfs4` - Mounts the file system as an NFSv4.1 type.
 4. **Options**:
    - `nfsvers=4.1`: Specifies the NFS version.
