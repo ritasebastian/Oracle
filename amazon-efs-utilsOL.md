@@ -43,4 +43,11 @@ rpm -qi amazon-efs-utils
 
 This process compiles and installs the `amazon-efs-utils` package on your Oracle Linux 8 system, enabling you to mount Amazon EFS file systems.
 
-For more detailed information, refer to the official AWS documentation on manually installing the Amazon EFS client:  
+```bash
+sudo mkdir -p /orcl-arch
+```
+```bash
+sudo mount -t efs -o tls fs-080066337fa685f02:/ /orcl-arch # replace the file system id
+```
+
+
