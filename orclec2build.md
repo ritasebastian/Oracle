@@ -30,7 +30,7 @@ Steps to create an AWS EC2 instance with Oracle Linux, attach a security group, 
    - SSH (port 22) from your IP address
    - Oracle database port (1521) from necessary sources
    - EFS port (2049) for NFS access
-
+   - Install the package sudo yum install -y amazon-efs-utils
 3. Review and launch the instance.
 
 4. Select an existing key pair or create a new one to securely connect to your instance.
