@@ -53,7 +53,7 @@ sudo mount -t efs -o tls fs-080066337fa685f02:/ /orcl-arch # replace the file sy
 To add the mount configuration to `/etc/fstab` so the EFS file system mounts automatically at boot, you can use the following command:
 
 ```bash
-echo "fs-080066337fa685f02.efs.us-west-2.amazonaws.com:/ /efs nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 0 0" | sudo tee -a /etc/fstab
+echo "fs-080066337fa685f02.efs.us-west-2.amazonaws.com:/ /orcl-arch nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 0 0" | sudo tee -a /etc/fstab
 ```
 
 ### Explanation of the Command:
