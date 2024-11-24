@@ -24,6 +24,12 @@ To enable X11 applications on an Oracle Linux 8.9 (OL8.9) EC2 instance, follow t
 
 5. Connect to the EC2 instance using SSH with X11 forwarding:
    ```bash
+   sudo mkdir -p /home/oracle/.ssh
+   sudo mkdir -p /home/grid/.ssh
+   sudo cp /home/ec2-user/.ssh/authorized_keys /home/oracle/.ssh
+   sudo cp /home/ec2-user/.ssh/authorized_keys /home/grid/.ssh
+   sudo chown -R oracle:oinstall /home/oracle/.ssh
+   sudo chown -R grid:oinstall /home/grid/.ssh
    ssh -i "2024-oregan.pem" -X ec2-user@ec2-54-187-120-22.us-west-2.compute.amazonaws.com
    ```
 
