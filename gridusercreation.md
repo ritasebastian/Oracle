@@ -40,7 +40,7 @@ sudo passwd grid
 Switch to the `grid` user and edit its `.bash_profile`:
 ```bash
 sudo su - grid
-nano ~/.bash_profile
+vi ~/.bash_profile
 ```
 
 Add the following lines to configure the environment variables:
@@ -80,11 +80,3 @@ The output should display the `ORACLE_HOME` path.
 
 ---
 
-### **5. Additional Configuration**
-If you’re setting up Oracle Grid Infrastructure:
-1. Run the `gridSetup.sh` script as the `grid` user.
-2. Follow the Oracle documentation for specific installation requirements, such as kernel parameter adjustments and disk group configurations.
-
----
-
-The Oracle Grid user is now created and ready for use in Oracle Grid Infrastructure setup. Let me know if you need help with the next steps!
