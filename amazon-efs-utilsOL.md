@@ -50,4 +50,35 @@ sudo mkdir -p /orcl-arch
 sudo mount -t efs -o tls fs-080066337fa685f02:/ /orcl-arch # replace the file system id
 ```
 
+To add the mount configuration to `/etc/fstab` so the EFS file system mounts automatically at boot, you can use the following command:
 
+```bash
+echo "fs-080066337fa685f02.efs.us-west-2.amazonaws.com:/ /efs nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 0 0" | sudo tee -a /etc/fstab
+```
+
+### Explanation of the Command:
+1. **EFS DNS Name**: `fs-080066337fa685f02.efs.us-west-2.amazonaws.com:/` - The EFS file system DNS.
+2. **Mount Point**: `/efs` - The directory where the file system will be mounted.
+3. **Filesystem Type**: `nfs4` - Mounts the file system as an NFSv4.1 type.
+4. **Options**:
+   - `nfsvers=4.1`: Specifies the NFS version.
+   - `rsize=1048576,wsize=1048576`: Sets the read and write buffer sizes.
+   - `hard`: Forces the system to retry if a server becomes unreachable.
+   - `timeo=600`: Sets the timeout value to 600 deciseconds.
+   - `retrans=2`: Limits the number of retransmissions to 2.
+   - `noresvport`: Uses a non-reserved port for the NFS client.
+5. **Dump and Pass Options**: `0 0` - Disables dump and fsck checks.
+
+### Apply the Changes:
+After adding the entry, apply it without rebooting:
+```bash
+sudo mount -a
+```
+
+### Verify the Mount:
+Check if the EFS is mounted correctly:
+```bash
+df -h
+```
+
+This ensures the EFS file system is automatically mounted on boot with the specified options.
