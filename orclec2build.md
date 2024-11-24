@@ -1,4 +1,4 @@
-Here are the steps to create an AWS EC2 instance with Oracle Linux, attach a security group, and assign an IAM role:
+Steps to create an AWS EC2 instance with Oracle Linux, attach a security group, and assign an IAM role:
 
 ## 1. Create AWS EC2 Instance
 
