@@ -68,7 +68,7 @@ sudo su - grid
 
 Navigate to the `gridSetup.sh` script directory:
 ```bash
-cd /u01/app/grid/gridSetup
+cd /u01/app/grid
 ```
 
 Run the installer:
