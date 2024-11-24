@@ -71,6 +71,7 @@ export ORACLE_SID=orcl
 export PATH=$PATH:$ORACLE_HOME/bin
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
 export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+export CV_ASSUME_DISTID=OEL8.0
 ```
 
 Save and exit the file. Apply the changes:
