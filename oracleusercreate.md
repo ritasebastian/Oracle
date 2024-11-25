@@ -59,6 +59,9 @@ sudo su - oracle
 
 Edit the `.bash_profile` for the `oracle` user:
 ```bash
+ssh-keygen -t rsa -b 2048
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
 vi ~/.bash_profile
 ```
 
