@@ -17,7 +17,13 @@ sed -i s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config
 
 # Install oracle prereqisites  
  ```bash
- sudo dnf install oracle-database-preinstall-19c -y 
+sudo dnf install oraclelinux-release-el8
+ sudo dnf install oracle-database-preinstall-19c -y
+sudo dnf config-manager --set-enabled ol8_baseos_latest ol8_appstream ol8_addons
+sudo dnf groupinstall "Development Tools" -y
+sudo dnf install libaio-devel unixODBC-devel -y
+wget https://cdn.amazonlinux.com/2/core/2.0/x86_64/6b0225ccc542f3834c95733dcf321ab9f1e77e6ca6817469771a8af7c49efe6c/../../../../../blobstore/e6eb2b14d86195fe7d1f603a87a78df99e2687b9b0ccb4ab10385f75bb57d5a6/compat-libcap1-1.10-7.amzn2.x86_64.rpm
+rpm -ivh compat-libcap1-1.10-7.amzn2.x86_64.rpm
  ```
 # Install oracleasm-support rpm package:
  ```bash
