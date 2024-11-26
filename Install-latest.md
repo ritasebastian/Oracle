@@ -6,7 +6,7 @@ hostnamectl set-hostname $NEW_HOSTNAME
 
 # Update /etc/hosts
 echo "Updating /etc/hosts..."
-HOSTS_ENTRY="34.208.14.12 $NEW_HOSTNAME"
+HOSTS_ENTRY="35.95.35.95 $NEW_HOSTNAME"
 if ! grep -q "$NEW_HOSTNAME" /etc/hosts; then
     echo "$HOSTS_ENTRY" >> /etc/hosts
 else
@@ -21,7 +21,7 @@ sed -i s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config
  ```
 # Install oracleasm-support rpm package:
  ```bash
-sudo dnf --enablerepo=ol9_addons -y install oracleasm-support
+sudo dnf --enablerepo=ol8_addons -y install oracleasm-support
 wget http://vault.centos.org/7.9.2009/os/x86_64/Packages/compat-libcap1-1.10-7.el7.x86_64.rpm
 sudo dnf localinstall compat-libcap1-1.10-7.el7.x86_64.rpm -y
 rpm -q --qf '%{NAME}-%{VERSION}-%{RELEASE} (%{ARCH})\n' binutils compat-libcap1 compat-libstdc++ glibc glibc-devel libaio libaio-devel make gcc gcc-c++ smartmontools sysstat unixODBC
