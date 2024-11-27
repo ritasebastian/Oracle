@@ -9,7 +9,7 @@ Before creating the Oracle Grid user, ensure the following:
 
 ---
 
-### **2. Create the Oracle Grid User**
+
 
 #### **Step 1: Create the User Group**
 Create the necessary operating system groups for Oracle Grid Infrastructure:
@@ -25,8 +25,15 @@ Create the Oracle Grid user (`grid`) and assign it to the groups:
 ```bash
 sudo useradd -g oinstall -G asmadmin,asmdba,asmoper grid
 ```
+#### **Step 3: Create Oracle Base Directories**
+Create the necessary directories for Oracle Grid and set permissions:
+```bash
+sudo mkdir -p /u01/app/grid
+sudo chown -R grid:oinstall /u01/app/grid
+sudo chmod -R 775 /u01/app/grid
+```
 
-#### **Step 3: Set a Password for the Grid User**
+#### **Step 4: Set a Password for the Grid User**
 Set a password for the `grid` user:
 ```bash
 sudo passwd grid
@@ -34,7 +41,7 @@ sudo passwd grid
 
 ---
 
-### **3. Configure User Environment**
+### **5. Configure User Environment**
 
 #### **Step 1: Set up the `.bash_profile` for the Grid User**
 Switch to the `grid` user and edit its `.bash_profile`:
@@ -58,18 +65,11 @@ export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
 export CV_ASSUME_DISTID=OEL8.0
 ```
 
-Save and exit the editor. Apply the changes:
+#### Save and exit the editor. Apply the changes:
 ```bash
 source ~/.bash_profile
 ```
 
-#### **Step 2: Create Oracle Base Directories**
-Create the necessary directories for Oracle Grid and set permissions:
-```bash
-sudo mkdir -p /u01/app/grid
-sudo chown -R grid:oinstall /u01/app/grid
-sudo chmod -R 775 /u01/app/grid
-```
 
 ---
 
