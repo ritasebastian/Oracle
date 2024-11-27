@@ -39,13 +39,12 @@ sudo passwd oracle
 Create the required directories for Oracle software installation:
 ```bash
 sudo mkdir -p /u01/app/oracle
-sudo mkdir -p /u01/app/oraInventory
 sudo mkdir -p /u01/app/oracle/product/19.0.0/dbhome_1
 ```
 
 Set the ownership and permissions for the directories:
 ```bash
-sudo chown -R oracle:oinstall /u01
+sudo chown -R oracle:oinstall /u01/app/oracle
 sudo chmod -R 775 /u01
 ```
 
