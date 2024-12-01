@@ -15,6 +15,9 @@ fi
 
 sed -i s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config
 
+sudo yum install -y binutils compat-libcap1 compat-libstdc++ glibc glibc-devel libaio libaio-devel make gcc gcc-c++
+sudo yum install -y smartmontools sysstat unixODBC libX11 libXtst libXi libXxf86vm alsa-lib xorg-x11-utils
+
 # Install oracle prereqisites  
  ```bash
 sudo dnf install oraclelinux-release-el8
