@@ -90,6 +90,9 @@ chown -R oracle:oinstall /u01/app/oracle
 # Software directory
 mkdir -p /u01/software
 chmod 777 /u01/software
+# add oracle and grid into sudo 
+echo "oracle ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo "oracle ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # ************************************
 # Download Oracle Software from S3
