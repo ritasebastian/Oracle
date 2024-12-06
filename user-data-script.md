@@ -99,8 +99,8 @@ echo "oracle ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 # ************************************
 
 # Copy Oracle software from S3 to local directories
-sudo -u ec2-user aws s3 cp s3://oraclesoftware123/LINUX.X64_193000_grid_home.zip /u01/software/
-sudo -u ec2-user aws s3 cp s3://oraclesoftware123/LINUX.X64_193000_db_home.zip /u01/software/
+sudo -u ec2-user /usr/local/bin/aws s3 cp s3://oraclesoftware123/LINUX.X64_193000_grid_home.zip /u01/software/
+sudo -u ec2-user /usr/local/bin/aws s3 cp s3://oraclesoftware123/LINUX.X64_193000_db_home.zip /u01/software/
 
 # ************************************
 # Extract Oracle Software
