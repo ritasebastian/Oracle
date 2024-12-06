@@ -1,3 +1,4 @@
+ ```bash
 #!/bin/bash
 
 # ************************************
@@ -121,3 +122,4 @@ sudo -u oracle git clone https://github.com/ogobrecht/sample-data-sets-for-oracl
 
 # Reload the network hostname service (optional but recommended)
 systemctl restart systemd-hostnamed
+```
